@@ -1,0 +1,15 @@
+contact:
+  - name : "Phone"
+    value: "+44 7493 84 94 28"
+  - name : "Email"
+    value: "silviuglv@gmail.com"
+
+social:
+  - icon: "fa-facebook"
+    link: "https://www.facebook.com/wwawesome.agency"
+  - icon: "fa-instagram"
+    link: "#"
+  - icon: "fa-twitter"
+    link: "#"
+  - icon: "fa-dribbble"
+    link: "#"

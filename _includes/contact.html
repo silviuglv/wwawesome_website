@@ -1,0 +1,40 @@
+<section class="section-contact" id="contact">
+  <div class="container">
+    <div class="description">
+      <h2 class="light-header">Contact us</h2>
+      <hr />
+    </div>
+    <div class="row">
+      <div class="contact-form">
+        <form name="contact" action="thank-you" method="post" netlify novalidate>
+          <div>
+            <input type="text" name="name" placeholder="Your name" value="" id="name" title="Please enter your name" required>
+          </div>
+          <input type="email" name="email" placeholder="Your email" value="" id="email" required>
+          <input type="text" name="phone" placeholder="Your phone number" value="" id="number" required>
+          <textarea name="message" rows="" cols="" placeholder="Your message" required></textarea>
+          <button type="submit" name="button" class="cta highlight">Let's go!</button>
+        </form>
+      </div>
+      <div class="details">
+        {% for item in site.data.details.contact %}
+        <div class="details-container">
+          <div class="details-name">{{ item.name }}</div>
+          <div class="details-value">{{ item.value }}</div>
+        </div>
+        {% endfor %}
+        <div class="social">
+          {% for item in site.data.details.social %}
+          <a class="social-link" href="{{ item.link }}"><i class="fa {{ item.icon }}" aria-hidden="true"></i></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <footer class="row">
+      <div class="copyright">
+        <span>&copy;</span>
+        <object type="image/svg+xml" data="/assets/img/logo.svg">WW aWesome</object>
+      </div>
+    </footer>
+  </div>
+</section>

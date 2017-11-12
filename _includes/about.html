@@ -1,0 +1,24 @@
+<section class="about" id="about">
+  <div class="container">
+    <div class="description">
+      <h2>Creative web agency</h2>
+      <hr />
+      <p class="narrow"><span class="focus">We</span> create clean, fast, and affordable interfaces using the latest technologies and tools in order to meet your business needs and achieve your goals! </p>
+      <p class="narrow">Our goal is to help small, local businesses secure their spot on the map by taking advantages of the <span class="focus">W</span>olrd <span class="focus">W</span>ide <span class="focus">W</span>eb as a marketing and sales tool.</p>
+    </div>
+    <div class="services">
+      <h3>Our services</h3>
+      <hr />
+      <div class="row">
+      {% for item in site.data.services %}
+      <span class="box-container">
+      <span class="box" data-aos="flip-right" data-aos-delay="{{ item.delay }}">
+        <object type="image/svg+xml" data="{{item.icon}}">Your browser does not support SVGs</object>
+        <h6>{{item.name}}</h6>
+      </span>
+        </span>
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+ <section class="lead-section">
+  <div class="container lead-container">
+    <header>
+      <div class="logo"><object type="image/svg+xml" data="/assets/img/logo.svg">WW aWesome</object></div>
+      <nav>
+        <ul class="nav-links">
+          {% for item in site.data.links %}
+          <li><a class="link page-scroll" href="{{ item.link }}">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <div class="section-content row">
+      <h1 id="lead-title"></h1>
+      <div class="cta-container">
+        <a class="cta highlight page-scroll" href="#offers">special offers</a>
+        <a class="cta page-scroll" href="#contact">contact us</a>
+      </div>
+    </div>
+    <div class="pointer-container">
+    <div class="pointer"></div>
+    <a class="page-scroll" href="#about">
+      <div class="inner-pointer"><i class="fa fa-angle-down arrow" aria-hidden="true"></i></div>
+    </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,103 @@
+@import "https://fonts.googleapis.com/css?family=Nunito:700,800,900|Source+Sans+Pro:300,400,600"
+
+body
+  font-family: 'Source Sans Pro', sans-serif
+
+hr
+  background-color: $focus
+  margin-top: 0
+  height: 2px
+  outline: none
+  border: none
+  width: 10rem
+
+.narrow
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+ul
+  padding: 0
+  li
+    list-style: none
+
+// FORMS
+
+input, textarea
+  display: block
+  width: 100%
+  margin-top: 30px
+  padding: 10px
+  text-decoration: none
+  outline: 0
+  border: 0
+  border-radius: 0
+  background-color: transparent
+  color: silver
+  font-size: 16px
+  &::placeholder
+    color: lighten($blue, 50)
+    font-size: 16px
+  &:focus
+    box-shadow: 0 0 5px 1px $pink-shadow
+
+input:first-child
+  margin-top: 0
+
+input
+  border-bottom: 0.5px solid lighten($blue, 30)
+
+textarea
+  height: 100px
+  background-color: transparent
+  border: 0.5px solid lighten($blue, 30)
+
+// Typography
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5
+  font:
+    family: 'Nunito', sans-serif
+    weight: 800
+  text-align: center
+
+h1, .h1
+  font:
+    size: $h1-font-size
+    weight: 900
+  color: $silver
+
+h2, .h2
+  font-size: $h2-font-size
+h3, .h3
+  font-size: $h3-font-size
+h4, .h4
+  font-size: $h4-font-size
+h6, .h6
+  text-transform: uppercase
+  font-weight: 600
+
+p
+  font-size: $p-font-size
+  margin-top: 20px
+  color: $gray
+  font-weight: 300
+
+.min
+  font-size: $p-font-size * 0.8
+  margin-top: 5px
+
+a, button
+  text-transform: uppercase
+  font-size: 14px
+  color: white
+  font-weight: 600
+  background: transparent
+  outline: 0
+
+a:focus, a:hover
+  color: white
+  text-decoration: none
+
+.light-header
+  color: $silver

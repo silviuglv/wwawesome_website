@@ -1,0 +1,6 @@
+- name: "about us"
+  link: "#about"
+- name: "special offers"
+  link: "#offers"
+- name: "contact us"
+  link: "#contact"

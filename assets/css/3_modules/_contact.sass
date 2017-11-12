@@ -1,0 +1,53 @@
+.section-contact
+  background-color: $blue
+  color: $silver
+
+.contact-form
+  @include make-lg-column(6)
+  @include make-md-column(6)
+
+.details
+  @include make-lg-column(5)
+  @include make-md-column(5)
+  @include make-lg-column-push(1)
+  @include make-md-column-push(1)
+
+.details-container
+  margin-top: 10px
+  margin-bottom: 10px
+
+.details-name
+  font-size: 16px
+  padding-top: 10px
+
+button[type="submit"]
+  margin-top: 30px
+  margin-left: 0
+
+.error
+  font-size: 10px
+  margin-top: 2px
+footer
+  margin-top: 10px
+  margin-bottom: 10px
+  border-top: 1px solid $focus
+
+.copyright
+  padding: 20px
+  text-align: center
+  font-size: 1rem
+  span
+    vertical-align: middle
+  object
+    height: 0.8rem
+    vertical-align: middle
+
+.social
+  width: 80%
+  display: flex
+  justify-content: space-between
+  margin-top: 30px
+  margin-bottom: 20px
+.social-link
+  font-size: 20px
+  color: white

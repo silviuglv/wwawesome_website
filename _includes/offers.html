@@ -1,0 +1,32 @@
+<section class="offers" id="offers">
+  <div class="container">
+    <div class="row description">
+      <h2>Special offers</h2>
+      <hr />
+    </div>
+    <div class="row offers-wrapper">
+      {% for offer in site.data.offers %}
+      <div class="offer-container">
+        <div class="offer-content" data-aos="zoom-in-up" data-aos-delay="{{ offer.delay }}">
+          <div class="title"><h6>{{ offer.name }}</h6></div>
+          <div class="price"><h3>{{ offer.price }}</h3></div>
+          <div class="features">
+            <ul class="features-list">
+              {% for feature in offer.features %}
+              <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="contact-cta">
+            <a href="#contact" class="cta highlight page-scroll" type="button" name="button">Contact us</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="extras narrow">
+      <p class="min">* All our projects are completely responsive unless otherwise requested.</p>
+      <p class="min">* We offer free website hosting troughout third party solutions </p>
+    </div>
+  </div>
+</section>
