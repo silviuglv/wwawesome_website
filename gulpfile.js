@@ -9,6 +9,14 @@ var gulp        = require('gulp'),
     cssNano     = require('gulp-cssnano'),
     imagemin    = require('gulp-imagemin');
 
+var supported = [
+    'last 2 versions',
+    'safari >= 8',
+    'ie >= 10',
+    'ff >= 20',
+    'ios 6',
+    'android 4'
+];
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -53,9 +61,10 @@ gulp.task('sass', function () {
             includePaths: ['css'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(sourcemaps.init())
-        .pipe(cssNano())
+        .pipe(cssNano({
+            autoprefixer: {browsers: supported, add: true}
+        }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
         .pipe(gulp.dest('./_site/assets/css'))
