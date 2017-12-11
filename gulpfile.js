@@ -43,7 +43,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'js', 'images', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -62,9 +62,9 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(sourcemaps.init())
-        .pipe(cssNano({
-            autoprefixer: {browsers: supported, add: true}
-        }))
+        // .pipe(cssNano({
+        //     autoprefixer: {browsers: supported, add: true}
+        // }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
         .pipe(gulp.dest('./_site/assets/css'))

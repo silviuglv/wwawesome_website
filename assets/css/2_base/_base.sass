@@ -1,7 +1,6 @@
-@import "https://fonts.googleapis.com/css?family=Nunito:700,800,900|Source+Sans+Pro:300,400,600"
-
 body
-  font-family: 'Source Sans Pro', sans-serif
+  font-family: 'Montserrat', sans-serif
+  background-color: $white
 
 hr
   background-color: $focus
@@ -57,22 +56,31 @@ textarea
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5
   font:
-    family: 'Nunito', sans-serif
-    weight: 800
-  text-align: center
+    family: 'Montserrat', sans-serif
 
 h1, .h1
   font:
     size: $h1-font-size
-    weight: 900
-  color: $silver
+    weight: 300
+  color: $secondary
 
 h2, .h2
   font-size: $h2-font-size
 h3, .h3
   font-size: $h3-font-size
 h4, .h4
-  font-size: $h4-font-size
+  font:
+    size: $h4-font-size
+    weight: 900
+  margin-bottom: 40px
+  line-height: 30px
+
+@media (max-width: $screen-xs-min)
+  h4, .h4
+    line-height: 20px
+    margin-bottom: 20px
+
+
 h6, .h6
   text-transform: uppercase
   font-weight: 600
@@ -87,17 +95,19 @@ p
   font-size: $p-font-size * 0.8
   margin-top: 5px
 
-a, button
-  text-transform: uppercase
-  font-size: 14px
-  color: white
-  font-weight: 600
+a.main-link
+  font-size: 10px
+  color: $primary
+  font-weight: 300
   background: transparent
   outline: 0
+  transition: 0.5s linear
 
 a:focus, a:hover
-  color: white
-  text-decoration: none
+  text-decoration: underline
 
 .light-header
   color: $silver
+
+.uppercase
+  text-transform: uppercase

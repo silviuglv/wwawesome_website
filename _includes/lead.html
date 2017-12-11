@@ -1,28 +1,19 @@
- <section class="lead-section">
-  <div class="container lead-container">
+ <section class="container lead-section">
+
     <header>
         <div class="logo"> <a href="{{ site.url }}"><img src="/assets/img/logo.svg" alt="wwawesome logo"></a></div>
       </a>
       <nav>
         <ul class="nav-links">
           {% for item in site.data.links %}
-          <li><a class="link page-scroll" href="{{ item.link }}">{{ item.name }}</a></li>
+          <li><a class="main-link page-scroll" href="{{ item.link }}">{{ item.name }}</a></li>
           {% endfor %}
         </ul>
       </nav>
     </header>
     <div class="section-content row">
-      <h1 id="lead-title"></h1>
-      <div class="cta-container">
-        <a class="cta highlight page-scroll" href="#offers">special offers</a>
-        <a class="cta page-scroll" href="#contact">contact us</a>
-      </div>
+      <h4 class="kicker">Welcome to <br /><span class="uppercase">world wide awesome</span></h4>
+      <h1 class="lead-title">We help businesses getting attention in a connected world</h1>
+      <div class="info">Portfolio coming soon!</div>
     </div>
-    <div class="pointer-container">
-    <div class="pointer"></div>
-    <a class="page-scroll" href="#about">
-      <div class="inner-pointer"><i class="fa fa-angle-down arrow" aria-hidden="true"></i></div>
-    </a>
-    </div>
-  </div>
 </section>
