@@ -62,9 +62,9 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(sourcemaps.init())
-        // .pipe(cssNano({
-        //     autoprefixer: {browsers: supported, add: true}
-        // }))
+        .pipe(cssNano({
+            autoprefixer: {browsers: supported, add: true}
+        }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
         .pipe(gulp.dest('./_site/assets/css'))
